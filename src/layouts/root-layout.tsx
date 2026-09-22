@@ -11,12 +11,16 @@ import {
 
 export default function RootLayout() {
   return (
+    // <SidebarProvider> เป็นตัวกลางคอยควบคุมการเปิด-ปิดของแถบเมนูด้านซ้าย
+    // <AppSidebar /> เรียกแถบเมนูด้านซ้ายที่เราเขียนไว้มาแสดงผล
+    // < SidebarInset > คือพื้นที่หน้าต่างหลักทางฝั่งขวา(ฝั่งเนื้อหาเว็บทั้งหมด)
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
         <header className="flex h-14 items-center justify-between gap-2 border-b px-4">
           <div className="flex items-center gap-2">
             <SidebarTrigger />
+            {/* ฝั่งซ้าย: มีปุ่มกดพับ/ขยาย Sidebar (SidebarTrigger) และข้อความชื่อระบบว่า "ระบบลงทะเบียนเรียน" */}
             <span className="text-sm font-medium">ระบบลงทะเบียนเรียน</span>
           </div>
           <ModeToggle />
