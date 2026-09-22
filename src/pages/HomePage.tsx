@@ -12,7 +12,7 @@ export default function HomePage() {
           </CardTitle>
         </CardHeader>
         <CardContent className="pt-0">
-          <Button asChild size="sm">
+          <Button size="sm">
             <Link to="/enrollment">ไปหน้าลงทะเบียนเรียน</Link>
           </Button>
         </CardContent>
