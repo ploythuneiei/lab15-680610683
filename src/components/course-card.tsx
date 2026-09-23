@@ -41,8 +41,8 @@ export function CourseCard({
 
   // ข้อ 3: Light = ลงทะเบียนแล้วสีอำพัน / เปิดรับสีม่วง, Dark = สลับกัน
   const badgeClassName = isEnrolled
-    ? "bg-amber-100 text-amber-800 dark:bg-purple-500/20 dark:text-purple-300"
-    : "bg-purple-100 text-purple-700 dark:bg-amber-500/20 dark:text-amber-300";
+    ? "bg-amber-200 text-amber-800 dark:bg-purple-600/20 dark:text-purple-300"
+    : "bg-purple-200 text-purple-700 dark:bg-amber-600/20 dark:text-amber-300";
 
   return (
     <Card>

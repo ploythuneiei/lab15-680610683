@@ -7,6 +7,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { Separator } from "@/components/ui/separator";
 
 export default function RootLayout() {
   return (
@@ -19,6 +20,7 @@ export default function RootLayout() {
         <header className="flex h-14 items-center justify-between gap-2 border-b px-4">
           <div className="flex items-center gap-2">
             <SidebarTrigger />
+            <Separator orientation="vertical" className="h-4" />
             {/* ฝั่งซ้าย: มีปุ่มกดพับ/ขยาย Sidebar (SidebarTrigger) และข้อความชื่อระบบว่า "ระบบลงทะเบียนเรียน" */}
             <span className="text-sm font-medium">ระบบลงทะเบียนเรียน</span>
           </div>
@@ -37,3 +39,4 @@ export default function RootLayout() {
     </SidebarProvider>
   );
 }
+
