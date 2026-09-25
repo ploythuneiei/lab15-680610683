@@ -58,11 +58,16 @@ export function AppSidebar() {
       <SidebarFooter>
         <Separator />
         <div className="flex items-center gap-2 px-2 py-1">
+          {/* จัดเลย์เอาต์แบบแนวนอน (Flexbox) ให้รูปโปรไฟล์กับข้อความอยู่บรรทัดเดียวกัน เว้นระยะห่างระหว่างกันนิดหน่อย (gap-2) และเว้นขอบรอบๆ (px-2 py-1) */}
           <Avatar>
             <AvatarImage src={currentUser.avatar} alt={currentUser.nickname} />
+            {/* alt (ย่อมาจากคำว่า Alternative text หรือข้อความทางเลือก) ในบรรทัดนี้คือ "ข้อความอธิบายรูปภาพ" ครับ */}
             <AvatarFallback>{currentUser.nickname.charAt(0)}</AvatarFallback>
+            {/* <AvatarFallback>: ถ้าเกิดรูปภาพโหลดไม่ขึ้นหรือไม่มีรูป ระบบจะแสดงตัวอักษรสำรองแทน โดยใช้คำสั่ง {currentUser.nickname.charAt(0)} 
+            เพื่อ "ดึงตัวอักษรตัวแรกของชื่อเล่น" มาแสดงเป็นตัวย่อ (เช่น ชื่อ "Bank" จะแสดงตัวอักษร "B") */}
           </Avatar>
           <div className="flex flex-col items-start ">
+            {/* จัดเรียงข้อความในแนวตั้ง (ชื่ออยู่ด้านบน, ป้ายสถานะอยู่ด้านล่าง) */}
             <span className="text-sm font-medium">{currentUser.nickname}</span>
             <Badge variant="outline">{currentUser.role}</Badge>
           </div>
